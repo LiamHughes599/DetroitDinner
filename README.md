@@ -1,2 +1,2 @@
 # DetroitDinner
-A Detroit themed restaurant in Idaho
+An Irish Cafe in Idaho
