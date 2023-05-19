@@ -1,40 +1,59 @@
-<nav>
-  <a routerLink="/" class="dd">Sona Cafe</a>
-  <ul>
-    <a routerLink="/menu"><li>Menu</li></a>
-    <a routerLink="/about"><li>About</li></a>
-    <a routerLink="/contact"><li>Contact</li></a>
-  </ul>
-
-</nav>
-
-
-  <router-outlet></router-outlet>
-
-
-<footer>
-  <div>
-      <h1>Check out our Socials!</h1>
-      <hr>
-      <a href=""><img src="../assets/images/social-icons.png" alt="social media icons" height="25%" width="30%"></a>
-  </div>
+<div class="wrap">
+  <nav class="desktop-nav">
+    <a routerLink="/" class="logo">Sona Cafe</a>
+    <ul>
+      <a routerLink="/menu"><li>Menu</li></a>
+      <a routerLink="/about"><li>About</li></a>
+      <a routerLink="/contact"><li>Contact</li></a>
+    </ul>
+  </nav>
   
-  <ul>
-    <a routerLink="/menu"><li>Home</li></a>
-    <a routerLink="/menu"><li>Menu</li></a>
-    <a routerLink="/about"><li>About</li></a>
-    <a routerLink="/contact"><li>Contact</li></a>
+  <nav class="mobile-nav">
+    <div class="logo">
+      <a routerLink="/">Sona Cafe</a>
+      <button (click)="showLinks()"><img src="../assets/images/menu-icon.png"></button>
+    </div>
+    
+    <div class="links">
+      <ul>
+        <a routerLink="/"><li>Home</li></a>
+        <a routerLink="/menu"><li>Menu</li></a>
+        <a routerLink="/about"><li>About</li></a>
+        <a routerLink="/contact"><li>Contact</li></a>
       </ul>
+    </div>
+  
+  </nav>
+  
+    <section class="outlet"><router-outlet></router-outlet></section>
+  
+    <footer class="footer">
+      <div>
+          <h1>Check out our Socials!</h1>
+          <hr>
+          <a href=""><img src="../assets/images/social-icons.png" alt="social media icons" height="25%" width="30%"></a>
+      </div>
+      
+      <ul>
+        <a routerLink="/menu"><li>Home</li></a>
+        <a routerLink="/menu"><li>Menu</li></a>
+        <a routerLink="/about"><li>About</li></a>
+        <a routerLink="/contact"><li>Contact</li></a>
+          </ul>
+    
+      <div>
+        <h1>Sona Cafe</h1>
+        <hr>
+        <p>Fake address:  11 Lorem ipsum dolor, Sit Amet, 49805 </p>
+        <p>555-888-9999</p>
+        <p>SonaCafe@gmail.com</p>
+      </div>
+    
+    </footer>
+</div>
 
-  <div>
-    <h1>Sona Cafe</h1>
-    <hr>
-    <p>Fake address:  11 Lorem ipsum dolor, Sit Amet, 49805 </p>
-    <p>555-888-9999</p>
-    <p>SonaCafe@gmail.com</p>
-  </div>
 
-</footer>
+
 
 
 

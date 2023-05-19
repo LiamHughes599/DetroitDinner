@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "DetroitDinnerCode": {
+    "SonaCafe": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/detroit-dinner-code",
+            "outputPath": "dist/SonaCafe",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "DetroitDinnerCode:build:production"
+              "browserTarget": "SonaCafe:build:production"
             },
             "development": {
-              "browserTarget": "DetroitDinnerCode:build:development"
+              "browserTarget": "SonaCafe:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "DetroitDinnerCode:build"
+            "browserTarget": "SonaCafe:build"
           }
         },
         "test": {
@@ -98,7 +98,19 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": ["./node_modules/jquery/dist/jquery.min.js"]
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js"
+            ]
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "SonaCafe:build:production",
+            "firebaseProject": "sona-cafe",
+            "firebaseHostingSite": "sona-cafe"
           }
         }
       }

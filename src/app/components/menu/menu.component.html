@@ -1,1 +1,48 @@
-<main>Menu works</main>
+<main>
+   <img src="../../../assets/images/header1.jpg">
+
+    <h1>Meals</h1> <hr>
+    <section>
+    
+
+        <div class="item-wrapper" *ngFor="let item of meals">
+            <h2>{{item.title}}</h2>
+            <button>Show More</button>
+            <div class="hover-display">
+                <img src="{{item.img}}">
+                <h3>{{item.desc}}</h3>  
+            </div>
+            <p>{{item.price}}</p> 
+        </div>
+    </section>
+
+    <h1>Breakfast</h1> <hr>
+    <section>
+        
+        <div class="item-wrapper" *ngFor="let item of breakfast">
+            <h2>{{item.title}}</h2>
+            <button>Show More</button>
+            <div class="hover-display">
+                <img src="{{item.img}}">
+                <h3>{{item.desc}}</h3>  
+            </div>
+            <p>{{item.price}}</p> 
+            
+            
+        </div>
+    </section>
+
+    <h1>Desserts</h1> <hr>
+    <section>
+        <div class="item-wrapper" *ngFor="let item of desserts">
+            <h2>{{item.title}}</h2>
+            <button>Show More</button>
+            <div class="hover-display">
+                <img src="{{item.img}}">
+                <h3>{{item.desc}}</h3>  
+            </div>
+            <p>{{item.price}}</p> 
+        </div>
+    </section>
+
+</main>

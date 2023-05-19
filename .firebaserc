@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "sona-cafe"
+  },
+  "targets": {
+    "sona-cafe": {
+      "hosting": {
+        "SonaCafe": [
+          "sona-cafe"
+        ]
+      }
+    }
+  }
+}
